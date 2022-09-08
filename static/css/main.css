@@ -1,0 +1,23 @@
+
+*{
+     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:arial,sans-serif;
+    color: #303385FF;
+}
+
+.search-section{
+    background-image: url('/static/img/stock1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.my-profile{
+    background-image: url('/static/img/foodstuffsqr1.jpg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

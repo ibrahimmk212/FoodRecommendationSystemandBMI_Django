@@ -1,0 +1,82 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+{% include "snippets/header.html" %}
+
+<section class="bg-red-900 w-screen flex flex-col items-center p-10">
+    <div class="search-area ">
+        <div class="bg-white w-6/6 rounded-lg flex">
+                <input  class="w-full h-12 p-2"
+                        type="text"
+                       placeholder="Search Foods and Food Recommendations ..."/>
+                <button class="w-24 bg-green-600 h-12">Search</button>
+        </div>
+    </div>
+</section>
+
+
+<main class="w-screen h-full flex p-4">
+
+
+<articles class="w-4/6 flex flex-wrap gap-1">
+
+{#    Cards#}
+      <div class="w-64">
+           {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+          <div class="w-64">
+           {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+          <div class="w-64">
+           {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+          <div class="w-64">
+           {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+
+      <div class="w-64">
+       {% include 'snippets/post-card.html' %}
+      </div>
+{#End of CArds#}
+
+</articles>
+
+
+<aside class="w-2/6 bg-red-100">
+    aside
+</aside>
+</main>
+
+{% endblock content %}

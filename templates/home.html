@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}FRS | Home{% endblock title %}
+
+{% block content %}
+
+{% include 'snippets/header.html' %}
+<main class="h-full">
+    <section class="search-section w-full h-[250px] flex items-center justify-center">
+        <div class="bg-white h-8 w-3/6 rounded-lg flex">
+            <input  class="w-full h-12 p-2"
+                    type="text"
+                   placeholder="Search Foods and Food Recommendations ..."/>
+            <button class="w-24 bg-green-600 h-12">Search</button>
+        </div>
+    </section>
+
+    <div class="w-full flex flex-column items-center justify-center m-8">
+        <div class="w-[600px]  home-content p-4">
+            <div class="header font-bold">OFRS-BMI - Online Food Recommendation System and Body Mass Index Calculator</div>
+            <div class="content">
+                <p>OFRS-BMS Is an online platform that recommend healthy meal to users,
+                it has hundredths of registered expert from the medical and dietary fields.
+                with OFRS, there is no hasle of booking an appointment or staying in a long, annoying and time wasting
+                queue, waiting for an expert to recommend your me. You can do all that by the press of a button on OFRS.
+                All our recoommendation are done by expert from many reputable medical institution and also from Food and
+                Drugs regulatory bodies of various countries (like NAFDAC of Nigeria).
+                </p>
+                <p>
+                    This System is embedded with a BMI - Body Mass Index Calculator.
+                    Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

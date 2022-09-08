@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+<body class="w-screen" >
+<header class="bg-white flex items-center justify-between h-12 p-6  font-bold drop-shadow-md border border-2 fixed top-0 z-10 w-[calc(100%-0%)]">
+    <div><a href="#">FOODRS logo</a></div>
+
+    <div class="flex gap-4 justify-center items-center">
+        <div class="avatar h-[62px] flex justify-center items-center"><img class=" max-w-[34px]" src="{% static 'nacos.jpg' %}" alt="" srcset=""></div>
+        <a href="#">logout</a>
+    </div>
+
+</header>
+
+<!--    SIDEBAR-->
+    <aside class="fixed h-full top-12 left-0 bg-gradient-to-bl from-slate-50 to-slate-200 w-[250px]">
+        <div class="navs pt-6">
+            <a href="#" class="nav block p-2 hover:bg-white hover:pl-2"><i class="fa fa-gauge"></i> Dashboard</a>
+            <a href="#" class="nav block p-3 hover:bg-white hover:pl-2"><i class="fa fa-cutlery"></i> Foods</a>
+            <a href="#" class="nav block p-3 hover:bg-white hover:pl-2"><i class="fa fa-users"></i> Experts</a>
+            <a href="#" class="nav block p-3 hover:bg-white hover:pl-2"><i class="fa fa-check"></i> Recommendations</a>
+            <a href="#" class="nav block p-3 hover:bg-white hover:pl-2"><i class="fa fa-sign-out"></i> Logout</a>
+        </div>
+
+    </aside>
+
+<!--    MAIN-->
+    <main class=" w-[calc(100% - 250px)] ml-[250px] mt-[70px]">
+        <div class="cards flex flex-wrap w-auto gap-1 h-38  ">
+<!--            PENDING EXPERTS-->
+            <a href="#" class=" bg-gradient-to-bl from-[#be3dfd] to-[#bea3dd] flex-1 min-w-[190px] m-1 rounded text-white flex p-2 ">
+                <div>
+                    <i class="fa fa-users p-0"></i>
+                    <div class="text-[2rem]">Experts</div>
+                    <div class="text-sm"><span class="font-bold">45</span> Pending Registrations</div>
+                </div>
+            </a>
+
+ <!--            REGISTERED EXPERTS-->
+            <a href="#" class=" bg-gradient-to-bl from-[#be3dfd] to-[#bea3dd] flex-1 min-w-[190px] m-1 rounded text-white flex p-2 ">
+                <div>
+                    <i class="fa fa-users p-0"></i>
+                    <div class="text-[2rem]">Experts</div>
+                    <div class="text-sm"><span class="font-bold">25</span> Registered</div>
+                </div>
+            </a>
+
+
+<!--            FOODS-->
+            <a href="#" class=" bg-gradient-to-bl from-[#be3dfd] to-[#bea3dd] flex-1 min-w-[190px] m-1 rounded text-white flex p-2 ">
+                <div>
+                    <i class="fa fa-cutlery p-0"></i>
+                    <div class="text-[2rem]">Food</div>
+                    <div class="text-sm"><span class="font-bold">25</span> items and their nutritional values</div>
+                </div>
+            </a>
+
+
+<!--            Recommendations-->
+            <a href="#" class=" bg-gradient-to-bl from-[#be3dfd] to-[#bea3dd] flex-1 min-w-[180px] m-1 rounded text-white flex p-2 ">
+                <div>
+                    <i class="fa fa-check"></i>
+                    <div class="text-[1.5rem]">Recommendations</div>
+                    <div class="text-sm"><span class="font-bold">45</span> Foods recommendations by experts</div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+</body>
+{% endblock content %}

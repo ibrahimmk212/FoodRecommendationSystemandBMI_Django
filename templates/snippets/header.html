@@ -1,0 +1,26 @@
+<header class="flex items-center justify-between h-14 p-6 text-slate-400 border border-1 font-bold">
+    <div class="left"><a href="{% url 'home' %}">FOODRS logo</a></div>
+    <div class="center">
+        <a href="#" class="hover:text-slate-900 p-2">Foods</a>
+        <a href="#" class="hover:text-slate-900 p-2">Recommendation</a>
+        <a href="#" class="hover:text-slate-900 p-2">BMI</a>
+        <a href="#" class="hover:text-slate-900 p-2">Experts</a>
+    </div>
+    <div id="welcome" class="right text-slate-300 bg-white" >
+        {% if request.user.is_authenticated %}
+        <span>Welcome {{ request.user.first_name }}  <i class="fa fa-caret-downm"></i> </span>
+                                                <div id="user-menu" class="font-light">
+                                                        <div>
+                                                            <a class=" hover:text-slate-900 " href={% url 'my-profile' %} >My profile</a> |
+                                                            <a class=" hover:text-slate-900 " href={% url 'my-page' %} >My Posts</a> |
+                                                            <a class=" hover:text-slate-900 " href={% url 'logout' %}>logout</a>
+                                                        </div>
+                                                </div>
+        {% else %}
+      <div><a href={% url 'login' %}>login</a> | <a href={% url 'expert-registration' %}>register</a></div>
+    {% endif %}
+    </div>
+
+
+
+</header>

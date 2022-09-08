@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Expert Registration {% endblock title %}
+
+{% block content %}
+<div class="w-screen h-screen bg-gradient-to-bl from-blue-200 to-blue-700 flex items-center justify-center p-4">
+
+<div class="border p-4 rounded-xl text-center bg-white">
+    <div class="text-2xl font-bold">Expert Registration</div>
+
+    <form method="post" enctype="multipart/form-data" class="justify-center items-center">
+        {% csrf_token %}
+        <div class="grid grid-cols-2 ">
+            {% for field in expert_registration_form %}
+                <div class="w-full gap-2">
+                    <div class="text-left text-blue-700 font-bold">{{ field.label_tag }}</div>
+                    <div>{{ field }}</div>
+                    {% for error in field.errors %}
+                        <small class="text-red-200 text-sm">{{ error }}</small>
+                    {% endfor %}
+                </div>
+
+            {% endfor %}
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+</div>
+
+</div>
+
+{% endblock content %}
